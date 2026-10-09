@@ -173,7 +173,7 @@ def test_platform():
             taken = False
         except OSError:
             taken = True
-            check('nothing else can bind the port', taken)
+        check('nothing else can bind the port', taken)
         check('a Mac path is still a path', server.WIN or server.PATH_RX.findall('see file:/Users/me/a/b/c.py') == ['/Users/me/a/b/c.py'])
     finally:
         s2.close()
